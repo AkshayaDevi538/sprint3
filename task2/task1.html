@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flex Layout Task</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .section {
+      padding: 20px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .header {
+      background-color: #00bcd4;
+    }
+
+    .top {
+      display: flex;
+    }
+
+    .hero {
+      background-color: #d1c4e9;
+      flex: 1;
+    }
+
+    .main-content {
+      background-color: #ffca28;
+      flex: 2;
+    }
+
+    .middle {
+      display: flex;
+    }
+
+    .sidebar {
+      background-color: #8bc34a;
+      flex: 1;
+    }
+
+    .extra-content {
+      background-color: #757575;
+      flex: 2;
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .related-images {
+      background-color: #4caf50;
+      flex: 2;
+    }
+
+    .related-posts {
+      background-color: #f8bbd0;
+      flex: 1;
+    }
+
+    .footer {
+      background-color: #ff9800;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section header">Header</div>
+
+    <div class="top">
+      <div class="section hero">Hero</div>
+      <div class="section main-content">Main Content</div>
+    </div>
+
+    <div class="middle">
+      <div class="section sidebar">Sidebar</div>
+      <div class="section extra-content">Extra Content</div>
+    </div>
+
+    <div class="bottom">
+      <div class="section related-images">Related Images</div>
+      <div class="section related-posts">Related Posts</div>
+    </div>
+
+    <div class="section footer">Footer</div>
+  </div>
+</body>
+</html>

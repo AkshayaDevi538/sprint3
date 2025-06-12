@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbox Layout Task 2</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      gap: 10px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      background-color: #e57373;
+      padding: 10px;
+    }
+
+    .top div {
+      flex: 1;
+      margin: 0 5px;
+      background-color: #e57373;
+      height: 60px;
+    }
+
+    .content {
+      display: flex;
+      gap: 10px;
+    }
+
+    .left {
+      flex: 1;
+      background-color: #616161;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .left .yellow-box {
+      width: 50px;
+      height: 50px;
+      background-color: #ffeb3b;
+    }
+
+    .right {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .right div {
+      background-color: #8bc34a;
+      height: 60px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Top Section -->
+    <div class="top">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+      <div class="left">
+        <div class="yellow-box"></div>
+      </div>
+      <div class="right">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
