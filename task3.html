@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #222;
+      padding: 20px;
+      color: white;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-style: italic;
+     font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      background-color: #f4f4f4;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h2 {
+      color: #004080;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      margin-bottom: 20px;
+    }
+
+    .hero img {
+      width: 300px;
+      max-width: 100%;
+    }
+
+    .btn {
+      background-color: #ff7f32;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Cards Section */
+    .cards {
+      padding: 40px;
+    }
+
+    .cards h2 {
+      margin-bottom: 20px;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #f4f4f4;
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      background: #ccc;
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #222;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 40px;
+    }
+
+    .footer-column {
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 15px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column .date {
+      background-color: #444;
+      padding: 5px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: #aaa;
+      font-size: 14px;
+    }
+    .circle-image {
+      width: 200px;       /* Set width */
+      height: 200px;      /* Set height equal to width for a perfect circle */
+      border-radius: 50%; /* Makes it round */
+      object-fit: cover;  /* Ensures the image covers the area without distortion */
+      border: 2px solid #333; /* Optional: adds a border */
+    }
+
+    .social-icons a {
+      display: block;
+      color: white;
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Bloom</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Services</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="hero-text">
+      <h2>Welcome to Bloom — Where Style Blossoms</h2>
+      <p>At Bloom, we believe fashion is more than just clothing — it’s a form of self-expression, an experience, and a celebration of individuality. Born out of a passion for timeless elegance and modern charm, Bloom Boutique curates handpicked collections designed to inspire confidence and beauty in every step you take.</p>
+      <button class="btn">Learn More</button>
+    </div>
+    <img src="c:\Users\aksha\Downloads\Chic 'Bloom' Boutique Logo with Flower Icon.png" alt="Hero Image"class="circle-image">
+  </div>
+
+  <!-- Cards Section -->
+  <div class="cards">
+    <h2>Product examples </h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://www.blushbytsd.com/cdn/shop/products/IMG66164-a_1024x1024.jpg?v=1679575584"style="width:300px; height:auto;">
+        <h3>Blush Reverie Wrap Dress</h3>
+        <p>₹2,799
+A soft pastel-pink wrap dress crafted from breathable chiffon with delicate ruffle detailing along the neckline. The waist-tie design flatters every body type, making it perfect for brunch dates, garden parties, or evening strolls. Light, feminine, and effortlessly elegant.
+
+</p>
+        <button class="btn">Learn More</button>
+      </div>
+      <div class="card">
+        <img src = "https://auraatrends.com/cdn/shop/files/gold-finish-kundan-polki-pearl-layered-chain-necklace-set-necklace-setauraa-trendsauraa-trendsat-1009163-972874.jpg?v=1747329872"style="width:300px; height:auto;">
+        <h3> Golden Aura Layered Necklace</h3>
+        <p>₹899
+Three layers of dainty gold-plated chains come together in this statement-making necklace. Featuring a tiny charm, coin pendant, and textured disc, it adds a sophisticated glow to even the simplest outfit. Ideal for both day and night looks.
+
+</p>
+        <button class="btn">Learn More</button>
+      </div>
+      <div class="card">
+        <img src = "https://sistersnatched.in/cdn/shop/products/AK_02150.jpg?v=1682064597"style="width:300px; height:auto;">
+        <h3>Olive Mist Linen Co-ord Set</h3>
+        <p>₹2,499
+Made with 100% organic linen, this two-piece co-ord set in muted olive tones blends comfort with understated style. The sleeveless crop top and high-waisted trousers offer a tailored fit, perfect for summer days or minimal-chic office wear.
+
+</p>
+        <button class="btn">Learn More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <!-- Latest Posts -->
+    <div class="footer-column">
+      <h3>Expo Dates</h3>
+      <ul>
+        <li><span class="date">JUL 28</span>Expo in Nagercoil </li>
+        <li><span class="date">AUG 31</span>Expo in Coddisia Coimbatore</li>
+        <li><span class="date">DEC 10</span>Expo in Chennai Forum Mall</li>
+      </ul>
+    </div>
+
+    <!-- About -->
+    <div class="footer-column">
+      <h3>About</h3>
+      <p>Bloom began with a simple idea: to create a boutique that blends effortless style with a personal touch. We started as a small local store with a big dream — to bring unique, high-quality fashion to women who value both comfort and class. Over time, we’ve grown into a beloved destination for trend-forward collections that cater to every season, mood, and occasion.
+
+</p>
+    </div>
+
+    <!-- Social Links -->
+    <div class="footer-column">
+      <h3>Stay Connected</h3>
+      <div class="social-icons">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">RSS</a>
+        <a href="#">Google+</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    Copyright © 2013. All rights reserved Bloom Web Design.
+  </div>
+
+</body>
+</html>
