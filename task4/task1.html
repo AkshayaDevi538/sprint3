@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbox Boarding Pass</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f0f0f0;
+    }
+    .ticket {
+      position: relative;
+      display: flex;
+      width: 800px;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 12px;
+      background: url('https://st.depositphotos.com/61126950/56391/v/600/depositphotos_563910030-stock-video-animation-airplane-flying-black-background.jpg') center/cover no-repeat;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    /* Left block: flight route */
+    .ticket__left {
+      flex: 2;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #fff;
+    }
+    .ticket__left h1 {
+      font-size: 2.5rem;
+      color: black;
+      letter-spacing: 2px;
+    }
+    .ticket__left .route {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+    .ticket__left .route span {
+      margin: 0 10px;
+    }
+    /* Center tear line */
+    .ticket__tear {
+      position: relative;
+      width: 20px;
+      background: #f0f0f0;
+      flex-shrink: 0;
+    }
+    .ticket__tear::before {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0; left: 50%;
+      width: 1px;
+      background: #999;
+    }
+    .ticket__tear .hole {
+      width: 16px;
+      height: 16px;
+      background: #f0f0f0;
+      border-radius: 50%;
+      position: absolute;
+      left: 2px;
+    }
+    .ticket__tear .hole.top {
+      top: -8px;
+    }
+    .ticket__tear .hole.bottom {
+      bottom: -8px;
+    }
+    /* Right block: passenger/details/barcode */
+    .ticket__right {
+      flex: 1.5;
+      background: rgba(255,255,255,0.9);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #333;
+    }
+    .ticket__info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      font-size: 0.9rem;
+    }
+    .ticket__info .item {
+      flex: 1 1 45%;
+    }
+    .ticket__info .item label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 4px;
+      font-size: 0.8rem;
+    }
+    .ticket__barcode {
+      text-align: center;
+    }
+    .ticket__barcode img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ticket">
+    <div class="ticket__left">
+      <div>
+        <small>BOARDING PASS</small>
+      </div>
+      <div class="route">
+        LONDON <span>➔</span> TOKYO
+      </div>
+      <div>
+        <small>DATE: 27 JUN 2022</small><br/>
+        <small>GATE: 25A</small>
+      </div>
+    </div>
+
+    <div class="ticket__tear">
+      <div class="hole top"></div>
+      <div class="hole bottom"></div>
+    </div>
+
+    <div class="ticket__right">
+      <div class="ticket__info">
+        <div class="item">
+          <label>Passenger</label>
+          John Doe
+        </div>
+        <div class="item">
+          <label>Seat</label>
+          4B
+        </div>
+        <div class="item">
+          <label>Flight</label>
+          IB147
+        </div>
+        <div class="item">
+          <label>Boarding</label>
+          06:30
+        </div>
+      </div>
+      <div class="ticket__barcode">
+        <!-- replace with your actual barcode image or SVG -->
+        <img src="https://qrcg-media.s3.eu-central-1.amazonaws.com/wp-content/uploads/2024/03/06171931/itf-barcode-1024x448.png" alt="Barcode"/>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
